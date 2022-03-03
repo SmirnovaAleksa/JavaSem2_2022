@@ -24,4 +24,12 @@ public class Professor {
 			this.name = "Unknown";
 		}
 	}
+	public void setSurname(String surname) {
+		if(name.matches("[A-Z]{1}[a-z]+")) {
+			this.surname = surname;
+		}
+		else {
+			this.surname = "Unknown";
+		}
+	}
 }
