@@ -57,5 +57,11 @@ public class Student {
 		setName(name);
 		setSurname(surname);
 	}
+
+	//4. toString
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + ", surname=" + surname + "]";
+	}
 	
 }
