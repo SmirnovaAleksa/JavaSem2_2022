@@ -76,6 +76,11 @@ public class Course {
 		setProfessor(professor);
 	}
 	
-	
+	//4. toString
+	@Override
+	public String toString() {
+		return "Course [id=" + id + ", title=" + title + ", creditPoints=" + creditPoints + 
+				", professor=" + professor+ "]";
+	}	
 	
 }
