@@ -67,20 +67,19 @@ public class Professor {
 		setSurname(surname);
 		setDegree(degree);
 	}
-	/*
+	
+	//4. toString
 	@Override
 	public String toString() {
 		return "Professor [name=" + name + ", surname=" + surname + ", degree=" + degree + "]";
 	}
-	*/
 	
+	/*
 	
-	
-	//4. toString
 	public String toString() {
 		return name+ " " + surname + " " + degree;
 	}
-	
+	*/
 	
 	
 }
