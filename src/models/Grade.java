@@ -74,4 +74,10 @@ public class Grade {
 	}
 	
 	//4.toString
+	@Override
+	public String toString() {
+		return "Grade [id=" + id + ", value=" + value + ", "
+				+ "student=" + student + ", course=" + course + "]";
+	}
+	
 }
