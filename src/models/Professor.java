@@ -32,4 +32,24 @@ public class Professor {
 			this.surname = "Unknown";
 		}
 	}
+	public void setDegree(ProfDegree degree) {
+		if(degree!=null) {
+			this.degree = degree;
+		}
+		else {
+			this.degree = ProfDegree.master;
+		}
+	}
+	//3. konstruktori
+	public Professor() {
+		setName("Test");
+		setSurname("Professor");
+		setDegree(ProfDegree.doctor);
+	}
+	public Professor(String name,String surname,ProfDegree degree) {
+		setName(name);
+		setSurname(surname);
+		setDegree(degree);
+	}
+	
 }
