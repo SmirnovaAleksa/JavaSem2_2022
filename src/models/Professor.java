@@ -5,6 +5,10 @@ public class Professor {
 	private String name;
 	private String surname;
 	private ProfDegree degree;
+	private int id;
+	
+	private static int idCounter = 0;
+	
 	//2. get funkcijas
 	public String getName() {
 		return name;
@@ -15,6 +19,10 @@ public class Professor {
 	public ProfDegree getDegree() {
 		return degree;
 	}
+	public int getId() {
+		return id;
+	}
+	
 	//3. set funkcijas
 	public void setName(String name) {
 		if(name.matches("[A-ZĀĒŪĪĻĶĢŠŽČŅ]{1}[a-zēūīāšģķļņčž]+")) {
@@ -40,14 +48,21 @@ public class Professor {
 			this.degree = ProfDegree.master;
 		}
 	}
+	public void setId() {
+		this.id = idCounter;
+		idCounter++;
+	}
+	
 	//3. konstruktori
 	public Professor() {
+		setId();
 		setName("Test");
 		setSurname("Professor");
 		setDegree(ProfDegree.doctor);
 	}
 	//Professor prof1 = new Professor("Karina","Sķinrtmane",ProfDegree.master)
 	public Professor(String name,String surname,ProfDegree degree) {
+		setId();
 		setName(name);
 		setSurname(surname);
 		setDegree(degree);
