@@ -46,10 +46,26 @@ public class Professor {
 		setSurname("Professor");
 		setDegree(ProfDegree.doctor);
 	}
+	//Professor prof1 = new Professor("Karina","Sķinrtmane",ProfDegree.master)
 	public Professor(String name,String surname,ProfDegree degree) {
 		setName(name);
 		setSurname(surname);
 		setDegree(degree);
 	}
+	/*
+	@Override
+	public String toString() {
+		return "Professor [name=" + name + ", surname=" + surname + ", degree=" + degree + "]";
+	}
+	*/
+	
+	
+	
+	//4. toString
+	public String toString() {
+		return name+ " " + surname + " " + degree;
+	}
+	
+	
 	
 }
