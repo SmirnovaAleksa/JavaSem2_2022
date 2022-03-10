@@ -22,7 +22,7 @@ public class Student {
 	}
 
 	//2.2 Setters
-	public void setId(int id) {
+	public void setId() {
 		this.id = idCounter;
 		idCounter++;
 	}
@@ -46,6 +46,16 @@ public class Student {
 	}
 	
 	//3.Konstructori
+	public Student() {
+		setId();
+		setName("Test");
+		setSurname("Student");
+	}
 	
+	public Student(String name,String surname) {
+		setId();
+		setName(name);
+		setSurname(surname);
+	}
 	
 }
