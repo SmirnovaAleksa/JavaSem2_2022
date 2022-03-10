@@ -14,12 +14,15 @@ public class Course {
 	public int getId() {
 		return id;
 	}
+	
 	public String getTitle() {
 		return title;
 	}
+	
 	public byte getCreditPoints() {
 		return creditPoints;
 	}
+	
 	public Professor getProfessor() {
 		return professor;
 	}
@@ -33,6 +36,7 @@ public class Course {
 			this.title = "Unknown";
 		}
 	}
+	
 	public void setCreditPoints(byte creditPoints) {
 		if(creditPoints > 0 && creditPoints <= 20) {
 			this.creditPoints = creditPoints;
@@ -41,6 +45,7 @@ public class Course {
 			this.creditPoints = 0;
 		}
 	}
+	
 	public void setProfessor(Professor professor) {
 		if(professor!=null) {
 			this.professor = professor;
@@ -49,12 +54,27 @@ public class Course {
 			this.professor = new Professor();
 		}
 	}
-	public void setId(int id) {
+	
+	public void setId() {
 		this.id = idCounter;
 		idCounter++;
 	}
 	
 
+	//3. konstruktori
+	public Course() {
+		setId();
+		setTitle("Testa kurss 2");
+		setCreditPoints((byte) 1);
+		setProfessor(new Professor());
+	}
+	
+	public Course(String title,byte creditPoints,Professor professor) {
+		setId();
+		setTitle(title);
+		setCreditPoints(creditPoints);
+		setProfessor(professor);
+	}
 	
 	
 	
