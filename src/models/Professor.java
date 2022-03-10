@@ -17,7 +17,7 @@ public class Professor {
 	}
 	//3. set funkcijas
 	public void setName(String name) {
-		if(name.matches("[A-Z]{1}[a-z]+")) {
+		if(name.matches("[A-ZĀĒŪĪĻĶĢŠŽČŅ]{1}[a-zēūīāšģķļņčž]+")) {
 			this.name = name;
 		}
 		else {
@@ -25,7 +25,7 @@ public class Professor {
 		}
 	}
 	public void setSurname(String surname) {
-		if(name.matches("[A-Z]{1}[a-z]+")) {
+		if(name.matches("[A-ZĀĒŪĪĻĶĢŠŽČŅ]{1}[a-zēūīāšģķļņčž]+")) {
 			this.surname = surname;
 		}
 		else {
