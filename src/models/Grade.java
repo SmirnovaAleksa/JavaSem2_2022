@@ -59,6 +59,19 @@ public class Grade {
 	}
 	
 	//3.Konstruktori
+	public Grade() {
+		setId();
+		setValue(0);
+		setStudent(new Student());
+		setCourse(new Course());
+	}
+	
+	public Grade(int value,Student student,Course course) {
+		setId();
+		setValue(value);
+		setStudent(student);
+		setCourse(course);
+	}
 	
 	//4.toString
 }
