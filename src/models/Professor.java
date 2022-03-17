@@ -1,21 +1,15 @@
 package models;
 
-public class Professor {
+public class Professor extends Person {
 	//1. mainīgie
-	private String name;
-	private String surname;
-	private ProfDegree degree;
 	private int id;
+	
+	private ProfDegree degree;
+	
 	
 	private static int idCounter = 0;
 	
 	//2. get funkcijas
-	public String getName() {
-		return name;
-	}
-	public String getSurname() {
-		return surname;
-	}
 	public ProfDegree getDegree() {
 		return degree;
 	}
@@ -24,22 +18,6 @@ public class Professor {
 	}
 	
 	//3. set funkcijas
-	public void setName(String name) {
-		if(name.matches("[A-ZĀĒŪĪĻĶĢŠŽČŅ]{1}[a-zēūīāšģķļņčž]+")) {
-			this.name = name;
-		}
-		else {
-			this.name = "Unknown";
-		}
-	}
-	public void setSurname(String surname) {
-		if(name.matches("[A-ZĀĒŪĪĻĶĢŠŽČŅ]{1}[a-zēūīāšģķļņčž]+")) {
-			this.surname = surname;
-		}
-		else {
-			this.surname = "Unknown";
-		}
-	}
 	public void setDegree(ProfDegree degree) {
 		if(degree!=null) {
 			this.degree = degree;
@@ -55,23 +33,21 @@ public class Professor {
 	
 	//3. konstruktori
 	public Professor() {
+		super("Test","Person");
 		setId();
-		setName("Test");
-		setSurname("Professor");
 		setDegree(ProfDegree.doctor);
 	}
 	//Professor prof1 = new Professor("Karina","Sķinrtmane",ProfDegree.master)
 	public Professor(String name,String surname,ProfDegree degree) {
+		super(name,surname);
 		setId();
-		setName(name);
-		setSurname(surname);
 		setDegree(degree);
 	}
 	
 	//4. toString
 	@Override
 	public String toString() {
-		return "Professor [name=" + name + ", surname=" + surname + ", degree=" + degree + "]";
+		return id + super.toString() + degree;
 	}
 	
 	/*
