@@ -1,8 +1,10 @@
 package service;
 
 import models.Course;
+import models.Grade;
 import models.ProfDegree;
 import models.Professor;
+import models.Student;
 
 public class VeA_IS {
 	
@@ -23,5 +25,25 @@ public class VeA_IS {
 		System.out.println(c1);
 		System.out.println(c2);
 		System.out.println(c3);
+		
+		Student student1 = new Student("Jānis", "Bērziņš");
+		Student student2 = new Student("Līga", "Jaukā");
+		Student student3 = new Student("Dace", "Ozoliņa");
+		
+		System.out.println(student1);
+		System.out.println(student2);
+		System.out.println(student3);
+		
+		Grade g1 = new Grade(10,student1,c1);
+		Grade g2 = new Grade(5,student1,c2);
+		Grade g3 = new Grade(6,student1,c3);
+		//Grade g4 = new Grade(7,student2,c1);
+		//Grade g5 = new Grade(8,student2,c3);
+		//Grade g6 = new Grade(10,student3,c2);
+		//Grade g7 = new Grade(9,student3,c3);
+		
+		System.out.println(g1);
+		System.out.println(g2);
+		System.out.println(g3);
 	}
 }
